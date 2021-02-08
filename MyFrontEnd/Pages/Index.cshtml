@@ -1,0 +1,60 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    List<WeatherForecast> weathers = (List<WeatherForecast>)ViewData["Message"];
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>@*@ViewData["Message"]*@</p>
+    <table id="weathers">
+        <theader>
+            <td>Date</td>
+            <td>TemperatureC</td>
+            <td>TemperatureF</td>
+            <td>Summary</td>
+        </theader>
+        @foreach (var w in weathers)
+        { <tr>
+            <td>@w.Date
+            </td>
+            <td>@w.TemperatureC
+            </td>
+            <td>@w.TemperatureF
+            </td>
+            <td>@w.Summary
+            </td>
+        </tr>}
+    </table>
+</div>
+
+<style>
+    #weathers {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+        #weathers td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #weathers tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #weathers tr:hover {
+            background-color: #ddd;
+        }
+
+        #weathers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: black;
+            color: white;
+        }
+</style>

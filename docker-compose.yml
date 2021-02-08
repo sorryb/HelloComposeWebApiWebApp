@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  myfrontend:
+    image: myfrontend
+    build:
+      context: .
+      dockerfile: MyFrontEnd/Dockerfile
+
+
+  mywebapi:
+    image: mywebapi
+    build:
+      context: .
+      dockerfile: MyWebApi/Dockerfile
+

@@ -1,0 +1,57 @@
+﻿
+
+Instal KOMPOSE 
+	https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/
+
+
+Convert docker-compose.yml to Kubernetes resources :
+	kompose convert
+
+Convert docker-compose.yml to Helm Chart :
+
+kompose convert -c
+
+
+----------------------------------- AKS ---------------------------------------
+https://thorsten-hans.com/6-steps-to-run-netcore-apps-in-azure-kubernetes
+
+az login
+
+
+az aks get-credentials --resource-group myResourceGroup --name myAKSCluster
+                                                                                You have logged in. Now let us find all the subscriptions to which you have access...
+                                                                                [
+                                                                                  {
+                                                                                    "cloudName": "AzureCloud",
+                                                                                    "id": "36a139de-7a36-4732-9b5e-ace7e185686f",
+                                                                                    "isDefault": false,
+                                                                                    "name": "Visual Studio Professional",
+                                                                                    "state": "Disabled",
+                                                                                    "tenantId": "0b3fc178-b730-4e8b-9843-e81259237b77",
+                                                                                    "user": {
+                                                                                      "name": "sorin.burtoiu@endava.com",
+                                                                                      "type": "user"
+                                                                                    }
+                                                                                  },
+                                                                                  {
+                                                                                    "cloudName": "AzureCloud",
+                                                                                    "id": "b1f03d80-e06c-4186-a96c-9c821146aadf",
+
+
+kubectl config get-contexts
+							                                    CURRENT   NAME                    CLUSTER                 AUTHINFO                                                     N
+							                                    AMESPACE
+							                                    *         MyAKSCluster            MyAKSCluster            clusterUser_myResourceGroup_MyAKSCluster
+									                                      docker-desktop          docker-desktop          docker-desktop
+									                                      sorted-pro-aks-dev-02   sorted-pro-aks-dev-02   clusterAdmin_rg-Sorted-WE-AKS-Dev-02_sorted-pro-aks-dev-02
+
+docker tag myfrontend myazcontcontainerregistry.azurecr.io/myfrontend
+
+
+az acr login -n myazcontcontainerregistry
+
+docker push myazcontcontainerregistry.azurecr.io/myfrontend
+
+docker tag mywebapi myazcontcontainerregistry.azurecr.io/mywebapi
+
+docker push myazcontcontainerregistry.azurecr.io/mywebapi

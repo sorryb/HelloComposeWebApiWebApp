@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: mywebapps
+  name: mywebapps-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mywebapps
+  template:
+    metadata:
+      labels:
+        app: mywebapps
+    spec:
+      containers:
+      - image: mywebapi
+        imagePullPolicy: "IfNotPresent"
+        name: mywebapi
+        ports:
+          - containerPort: 80         
+
