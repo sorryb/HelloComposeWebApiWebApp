@@ -3,11 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFrontEnd", "MyFrontEnd\MyFrontEnd.csproj", "{AF5950E4-4F28-4392-932A-173ECD4246AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyFrontEnd", "MyFrontEnd\MyFrontEnd.csproj", "{AF5950E4-4F28-4392-932A-173ECD4246AB}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{4BABB4A3-73B9-4C68-9F05-F1CCA5831B6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWebApi", "MyWebApi\MyWebApi.csproj", "{073CF9BC-7BE5-443C-8FB1-A382C1DBBE65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyWebApi", "MyWebApi\MyWebApi.csproj", "{073CF9BC-7BE5-443C-8FB1-A382C1DBBE65}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A3497917-E6D0-4296-BB48-BD77A49F52B3}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
